@@ -18,9 +18,12 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 while True:
-    city = input("insert the city name: ").lower
-    if city in CITY_DATA:
+    try:
+
         
+        city = input("insert the city name: ").lower
+        if city in CITY_DATA:
+
         print("ok, let\'s go on")
         break
     elif city not in CITY_DATA:
@@ -30,27 +33,27 @@ while True:
     month_list =  ['january', 'february', 'march', 'april', 'may', 'june']
     month = input("insert the month name: ").lower
     if month in month_list:
-        
+
         print("ok, let\'s go on")
     else:
         print("no month to show")
-    
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day_list = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = input("insert the day name: ").lower
     if day in day_list:
-        
+
         print("ok, let\'s go on")
     else:
         print("no day to show")
-    
+
     print('-'*40)
     return city, month, day
 
 
 def load_data(city, month, day):
-    
-    
+
+
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -62,9 +65,9 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
 """
     while True:
-        
-        
-        
+
+
+
 # load data file into a dataframe
         df = pd.read_csv(CITY_DATA[city])
 # convert the start time column to datetime
@@ -76,15 +79,15 @@ def load_data(city, month, day):
 
 #filter by month
        if month != 'all':
-        
-        
+
+
     #use the index of the month to get the following int
            month = ['january', 'february', 'march', 'april', 'may', 'june']
            month = month.index(month) + 1
-# filter by day of the week 
+# filter by day of the week
        if day_of_week != 'all':
-        
-        
+
+
     # filter by day
            df = df[df['day_of_week'] == day.title()]
 
@@ -93,8 +96,8 @@ def load_data(city, month, day):
 
 def time_stats(df):
     while True:
-        
-        
+
+
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -118,8 +121,8 @@ def time_stats(df):
 
 def station_stats(df):
     while True:
-        
-        
+
+
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -129,7 +132,7 @@ def station_stats(df):
         most_start_station = df['Start Station'].mode()[0]
 
     # TO DO: display most commonly used end station
-    
+
         most_end_station = df['End Station'].mode()[0]
 
     # TO DO: display most frequent combination of start station and end station trip
@@ -144,9 +147,9 @@ def station_stats(df):
 
 def trip_duration_stats(df):
     while True:
-        
-        
-        
+
+
+
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
@@ -164,9 +167,9 @@ def trip_duration_stats(df):
 
 def user_stats(df):
     while True:
-        
-        
-        
+
+
+
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
@@ -178,12 +181,12 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
         if 'Gender' in df.columns:
-            
-            count_gender = df.groupby(['Gender'])['Gender'].count()   
+
+            count_gender = df.groupby(['Gender'])['Gender'].count()
 
     # TO DO: Display earliest, most recent, and most common year of birth
         if 'Birth Year' in df.columns:
-            
+
             most_recent_year = df['Birth Year'].max()
             earliest_year = df['Birth Year'].min()
             most_common_year = df['Birth Year'].mode()[0]
@@ -196,15 +199,15 @@ def main():
     while True:
         show = input(" would you like to see more data rows? Enter sure or no.\n')
                      if show.lower() = 'sure':
-                         
+
                          print(df.head())
                          continue
-                     
+
                      print(df.head(10))
-                     
-                    
-                     
-                     
+
+
+
+
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
