@@ -182,6 +182,7 @@ def user_stats(df):
     # TO DO: Display counts of user types
         if 'User Type' in df.columns:
             count_user_type = df.groupby(['User Type'])['User Type'].count()
+            user_count = df['User Type'].value.counts()
 
     # TO DO: Display counts of gender
         if 'Gender' in df.columns:
