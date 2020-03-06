@@ -2,10 +2,10 @@
 Add bikeshare project and csv files and README file.
 
 ### Project Title
-awesome bikeshare project 
+awesome bikeshare project
 
 ### Description
-Describe what your project is about and what it does
+It's about bikeshare data , conducting some analysis on them
 
 ### Files used
 Include the files used

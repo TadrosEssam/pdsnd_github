@@ -18,12 +18,22 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 while True:
+<<<<<<< .merge_file_a10960
     try:
 
         
         city = input("insert the city name: ").lower
         if city in CITY_DATA:
 
+||||||| .merge_file_a09096
+    city = input("insert the city name: ").lower
+    if city in CITY_DATA:
+        
+=======
+    city = input("insert the city name: ").lower
+    if city in CITY_DATA:
+
+>>>>>>> .merge_file_a08676
         print("ok, let\'s go on")
         break
     elif city not in CITY_DATA:
@@ -96,18 +106,27 @@ def load_data(city, month, day):
 
 def time_stats(df):
     while True:
+<<<<<<< .merge_file_a10960
 
 
+||||||| .merge_file_a09096
+        
+        
+=======
+        try:
+
+
+>>>>>>> .merge_file_a08676
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
-        start_time = time.time()
+            start_time = time.time()
 
     # TO DO: display the most common month
-        most_common_month = df['month'].mode()[0]
+            most_common_month = df['month'].mode()[0]
 
     # TO DO: display the most common day of week
-        most_common_day = df['day_of_week'].mode()[0]
+            most_common_day = df['day_of_week'].mode()[0]
 
     # TO DO: display the most common start hour
 #extract hour from the start time column to create an hour column
@@ -220,6 +239,6 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
+print("i have done")
 if __name__ == "__main__":
 	main()
