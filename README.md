@@ -11,4 +11,4 @@ It's about bikeshare data , conducting some analysis on them
 file used chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity support team, graduates from Egypt, slack community https://app.slack.com/client/TPC4DLP7S/CPD42K8TW
