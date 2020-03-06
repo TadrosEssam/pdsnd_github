@@ -8,7 +8,7 @@ awesome bikeshare project
 It's about bikeshare data , conducting some analysis on them
 
 ### Files used
-Include the files used
+file used chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
